@@ -12,10 +12,10 @@ def generators(n):
             results.append(a)
     return results
 
-def gcd(m,n):
+def gcd(a,b):
 	if a==0:
 		return b
-	return (gcd(b%a, a)
+	return (gcd(b%a, a))
 
 p = int(input("enter a prime number:"))
 begin = time.time()
