@@ -31,7 +31,7 @@ function initMatrixRain(canvasId) {
         }
     }
 
-    setInterval(draw, 33);
+    setInterval(draw, 44);
 }
 
 var MatrixRain = {

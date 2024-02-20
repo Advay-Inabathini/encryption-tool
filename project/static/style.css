@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #1bbb00;
     text-align: center;
     font-size: 3rem;
 }
@@ -39,14 +39,16 @@ form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #16161697;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
 }
 
 label {
     display: block;
     margin-bottom: 10px;
+    color: white;
 }
 
 input,
@@ -58,10 +60,11 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    opacity: 25%;
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #1bbb00;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -77,7 +80,8 @@ button:hover {
     max-width: 600px;
     margin: 20px auto;
     padding: 10px;
-    background-color: #fff;
+    background-color: #16161697;
+    color: #1bbb00;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
