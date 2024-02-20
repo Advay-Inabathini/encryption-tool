@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Encryption/Decryption</title>
 </head>
+
 <body>
     <h1>Text Encryption/Decryption</h1>
 
@@ -44,17 +46,29 @@
         function submitForm() {
             var form = document.getElementById("crypto-form");
             var formData = new FormData(form);
-
+    
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "/", true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var result = JSON.parse(xhr.responseText);
-                    document.getElementById("result").innerText = result.result || result.error || "";
+                    var resultDiv = document.getElementById("result");
+    
+                    if (result.error) {
+                        resultDiv.innerText = result.error;
+                    } else {
+                        if (result.result) {
+                            resultDiv.innerText = result.result;
+                        } else if (result.cipher_text && result.private_key) {
+                            resultDiv.innerText = "Cipher Text: " + result.cipher_text + "\nPrivate Key: " + result.private_key;
+                        }
+                    }
                 }
             };
             xhr.send(formData);
         }
     </script>
+    
 </body>
+
 </html>
