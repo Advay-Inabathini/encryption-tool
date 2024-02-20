@@ -13,7 +13,7 @@ def gcd(a,b):
 	return(gcd(b%a, a))
 
 def modinverse(a,m):
-	m0. x0. x1 = m, 0, 1
+	m0, x0, x1 = m, 0, 1
 	while a>1:
 		q = a//m
 		m, a = a%m, m
