@@ -32,7 +32,7 @@ phi = (p-1)*(q-1)
 possibleE = [e for e in range(2, min(1001, phi)) if gcd(e, phi) == 1]
 
 print(f"list of possible e values (upto 1000): {possibleE}")
-
+InvalidE = True
 while InvalidE:
 	chosenE = int(input("choose an e: "))
 	if chosenE in possibleE:
@@ -46,5 +46,11 @@ privatekey = (n, d)
 print("chosen e: ", chosenE)
 print("calculated d: ", d)
 
+plain_text = int(input("enter plain text: "))
 
+cipher_text = (plain_text**chosenE)%n
+print("Cipher text: ", cipher_text)
+
+decrypted_text = (cipher_text**d)%n
+print("Decrypted text: ", decrypted_text)
 
