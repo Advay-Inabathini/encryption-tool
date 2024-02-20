@@ -34,7 +34,7 @@ possibleE = [e for e in range(2, min(1001, phi)) if gcd(e, phi) == 1]
 print(f"list of possible e values (upto 1000): {possibleE}")
 
 while InvalidE:
-	chosenE = int(input("choose an e: ")
+	chosenE = int(input("choose an e: "))
 	if chosenE in possibleE:
 		InvalidE = False
 
