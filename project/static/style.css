@@ -1,4 +1,26 @@
 /* style.css */
+/* style.css */
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scroll bars */
+}
+
+canvas#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allow clicks to go through the canvas */
+}
+
+h1,
+form,
+#result {
+    position: relative;
+    z-index: 1; /* Place form on top of the canvas */
+}
+
+/* Other existing styles */
+
 
 body {
     font-family: Poppins, sans-serif;
