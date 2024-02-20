@@ -9,6 +9,7 @@ from cryptography.hazmat.primitives.asymmetric import rsa, padding
 import base64
 import os
 
+
 app = Flask(__name__)
 
 # Change these to your secret key and salt
@@ -17,6 +18,8 @@ SALT = b'my_salt'
 
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+app.static_folder = 'static'
 
 private_key = None  # Initialize private key variable
 private_key_str = None  # Initialize private key string variable
