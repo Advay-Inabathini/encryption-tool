@@ -2,7 +2,7 @@
 /* style.css */
 body {
     margin: 0;
-    overflow: hidden; /* Prevent scroll bars */
+    overflow-y: hidden; /* Prevent scroll bars */
 }
 
 canvas#matrixCanvas {
@@ -77,11 +77,27 @@ button:hover {
 }
 
 #result {
-    max-width: 600px;
+    width: 40%;
     margin: 20px auto;
     padding: 10px;
     background-color: #16161697;
     color: #1bbb00;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#result-container {
+    margin-top: 20px; /* Adjust as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    max-width: 500px; /* Adjust as needed */
+    overflow: auto; /* Add a scrollbar if the content overflows */
+}
+
+#result {
+    white-space: pre-wrap; /* Preserve line breaks and wrap long lines */
+    font-family: 'Courier New', monospace; /* Optional: Use a monospaced font for better alignment */
+    font-size: 14px; /* Adjust as needed */
 }

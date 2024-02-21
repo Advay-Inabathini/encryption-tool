@@ -46,7 +46,12 @@
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
 
-    <div id="result"></div>
+
+
+    <div class="result-container">
+        <pre id="result"></pre>
+    </div>
+    
 
     <script>
         function submitForm() {
@@ -64,9 +69,17 @@
                         resultDiv.innerText = result.error;
                     } else {
                         if (result.result) {
-                            resultDiv.innerText = result.result;
+                            resultDiv.innerHTML = result.result;
                         } else if (result.cipher_text && result.private_key) {
-                            resultDiv.innerText = "Cipher Text: " + result.cipher_text + "\nPrivate Key: " + result.private_key;
+                            var cipherTextDiv = document.createElement("div");
+                    cipherTextDiv.innerHTML = "Cipher Text: " + result.cipher_text;
+                    resultDiv.appendChild(cipherTextDiv);
+
+                    // Create div for private key
+                    var privateKeyDiv = document.createElement("div");
+                    privateKeyDiv.innerHTML = "Private Key: " + result.private_key;
+                    resultDiv.appendChild(privateKeyDiv);
+
                         }
                     }
                 }
